@@ -2,6 +2,7 @@ package com.jee.test.compteur;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Random;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/compteur")
 public class Compteur extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private int cpt = 2147483645;
+	private int cpt = 0;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -29,7 +30,7 @@ public class Compteur extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		cpt++;
+		cpt += cpt;
 		PrintWriter  out  =   response.getWriter();
 		out.print("<html>");
 		out.print("<title>Connard !</title>");
